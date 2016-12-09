@@ -21,7 +21,7 @@ class CheckoutMachine
 
   def apply_discount
     if @bonus_card_scanned
-      @balance -= 50 * @salsa_counter
+      @balance -= 40 * @salsa_counter
       @balance -= 200 * (@chip_counter/3).floor
     end
   end
