@@ -9,7 +9,7 @@ class CheckoutMachine
   def scan(sku)
     update_balance(sku)
 
-    @bonus_card_scanned = true if sku == 000
+    @josh_the_man = true if sku == 100
   end
 
   def total
@@ -21,7 +21,7 @@ class CheckoutMachine
 
   def apply_discount
     if @bonus_card_scanned
-      @balance -= 50 * @salsa_counter
+      @balance -= 40 * @salsa_counter
       @balance -= 200 * (@chip_counter/3).floor
     end
   end
